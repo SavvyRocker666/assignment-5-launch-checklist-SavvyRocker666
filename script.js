@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
    
 });
 
-preventDefault()
+preventDefault();
 
 
 fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
