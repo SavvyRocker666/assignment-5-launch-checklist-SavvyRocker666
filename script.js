@@ -15,5 +15,4 @@ window.addEventListener("load", function() {
    
 });
 
-
-blah blah blah blah 
+preventDefault()
