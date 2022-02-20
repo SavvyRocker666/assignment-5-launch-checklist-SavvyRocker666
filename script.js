@@ -4,6 +4,9 @@ window.addEventListener("load", function() {
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+   fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
+   console.log(response);
+} );
    let listedPlanetsResponse;
    listedPlanetsResponse.then(function (result) {
        listedPlanets = result;
@@ -16,8 +19,3 @@ window.addEventListener("load", function() {
 });
 
 preventDefault();
-
-
-fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
-   console.log(response);
-} );
