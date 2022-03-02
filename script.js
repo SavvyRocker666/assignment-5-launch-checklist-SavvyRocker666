@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
        // Use helper functions to parse varibles listedPlanetsResponse
    //pickplanet on list planet varible
    let planet = pickPlanet(listedPlanets);
-   addDestinationInfo(planet,planet.name,planet.diameter,planet.star,planet.distance,planet.moon,planet.imageUrl)
+   addDestinationInfo(document,planet.name,planet.diameter,planet.star,planet.distance,planet.moon,planet.imageUrl)
 
  })
 
