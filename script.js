@@ -28,13 +28,13 @@ let testInput =validateInput(testInput);
 window.addEventListener("load",function(){
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
+      event.preventDefault();
       let pilotName = document.querySelector("input[name=pilot]");
       let copilotName = document.querySelector("input[name=copilot]");
        let fuelLevelName = document.querySelector("input[name=fuelLevel]");
        let cargoMassName = document.querySelector("input[name=cargoMass]");
       if (pilotName.value === "" || copilotName.value === ""|| fuelLevelName.value === ""||cargoMassName.value === "") {
          alert("All fields are required!");
-         event.preventDefault();
       }
    })
    });
