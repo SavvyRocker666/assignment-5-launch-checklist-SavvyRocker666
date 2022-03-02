@@ -1,22 +1,29 @@
 // Write your JavaScript code here!
 
+const { myFetch, pickPlanet, addDestinationInfo } = require("./scriptHelper");
+
 window.addEventListener("load", function() {
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
-   fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
-   console.log(response);
-} );
-   let listedPlanetsResponse;
+   let listedPlanetsResponse = myFetch();
    listedPlanetsResponse.then(function (result) {
        listedPlanets = result;
        console.log(listedPlanets);
    }).then(function () {
-       console.log(listedPlanets);
-       // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+      console.log(listedPlanets);
    })
+       // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+       // Use helper functions to parse varibles listedPlanetsResponse
+   //pickplanet on list planet varible
+   let planet = pickPlanet(listedPlanets);
+   addDestinationInfo(planet,planet.name,planet.diameter,planet.star,planet.distance,planet.moon,planet.imageUrl)
+
+ })
+
+
    
-});
+
 
 
 window.addEventListener("load", function() {
