@@ -1,3 +1,4 @@
 {
-    "npm.enableRunFromFolder": true
+    "npm.enableRunFromFolder": true,
+    "liveServer.settings.port": 5501
 }
