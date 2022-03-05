@@ -61,6 +61,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
  }
  }
     
+
+
 async function myFetch() {
     let planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then(response => response.json()).then(function(data) {
         return data;
