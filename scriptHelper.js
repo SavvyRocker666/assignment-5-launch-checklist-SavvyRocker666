@@ -25,7 +25,7 @@ function validateInput(testInput) {
    }
    return "Empty";
 }
-function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel,w) {
+function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel,arr) {
     class StatArr {
         constructor(id,value){
             this.id = id;
