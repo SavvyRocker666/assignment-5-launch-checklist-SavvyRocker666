@@ -1,7 +1,6 @@
 // Write your helper functions here!
-try{
     require('isomorphic-fetch');
-} catch(error){}
+
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     let target = document.querySelector('#missionTarget');
     target.innerHTML = `
@@ -59,10 +58,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
  launchStatus.style.color = "Green"
  }
  }
- }
-    
-
-
+ }//
 async function myFetch() {
     let planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then(response => response.json()).then(function(data) {
         return data;
@@ -73,10 +69,9 @@ async function myFetch() {
 function pickPlanet(planets) {
     return planets[Math.floor(Math.random()*planets.length)];
 }
-try{
+
     module.exports.addDestinationInfo = addDestinationInfo;
     module.exports.validateInput = validateInput;
     module.exports.formSubmission = formSubmission;
     module.exports.pickPlanet = pickPlanet; 
     module.exports.myFetch = myFetch;
-} catch(error){}

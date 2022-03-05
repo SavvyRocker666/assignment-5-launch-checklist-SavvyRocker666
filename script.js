@@ -26,7 +26,7 @@ window.addEventListener("load", function(event) {
         let copilotName = document.querySelector("input[name=copilot]").value;
          let fuelLevelName = document.querySelector("input[name=fuelLevel]").value;
          let cargoMassName = document.querySelector("input[name=cargoMass]").value;
-         let valid = formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
+         let valid = formSubmission(document, list, pilot, coPilot, fuelLevel, cargoLevel, w)
         if(!valid){
          event.preventDefault();
            }
