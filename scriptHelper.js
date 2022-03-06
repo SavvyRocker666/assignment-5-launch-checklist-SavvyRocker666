@@ -85,8 +85,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel,ar
         showAlert(statusArray);
     }
     statusArray.push(launchStat);
-    showStatus(doc,statusArray);
-    updateStatusColor(doc);
+    showStatus(document,statusArray);
+    updateStatusColor(document);
     if(list.style.visibility === 'hidden'){
         toggleVisibility(list);
     }

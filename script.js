@@ -18,14 +18,14 @@ window.addEventListener("load", function(event) {
    let form = document.querySelector('form');
    form.addEventListener('submit',function(event){
         let doc = document;
-        let arr = document.defaultView || doc.parentWindow;
-        arr.name = 'launchReport';
+        let w = document.defaultView || doc.parentWindow;
+        w.name = 'launchReport';
         let list = document.querySelector('#faultyItems');
         let pilot = document.querySelector('#pilotName').value;
         let coPilot = document.querySelector('input[name=copilotName]').value;
         let fuelLevel = document.querySelector('input[name=fuelLevel]').value;
         let cargoMass = document.querySelector('input[name=cargoMass]').value;
-        let valid = formSubmission(document,list,pilot,coPilot,fuelLevel,cargoMass,arr);
+        let valid = formSubmission(document,list,pilot,coPilot,fuelLevel,cargoMass,w);
         if(!valid){
             event.preventDefault();
         }
